@@ -1,0 +1,233 @@
+.player .control, .player #timeRange, .container, .player {
+  display: flex;
+}
+
+.player {
+  justify-content: center;
+  align-items: center;
+}
+
+.playlist li span, .player .control .playControl {
+  display: inline-block;
+}
+
+.player .control .playControl, .player .control .volume, .player #timeRange #timeContent {
+  position: relative;
+}
+
+.player .control .playControl i, .player .control .volume > button, .player .control .volume input, .player #timeRange #timeContent::after {
+  position: absolute;
+}
+
+:root {
+  --current-time: "";
+}
+
+body {
+  background: #f7f3f0 url(../img/background.png) no-repeat;
+  height: 100vh;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.8px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 2.5rem;
+}
+
+svg {
+  width: 25rem;
+}
+
+svg path {
+  stroke: #fff;
+  fill: #fff;
+  stroke-dasharray: 300;
+  opacity: 1;
+  animation: stroke-svg 5s cubic-bezier(0, 0.5, 1, 0.1) infinite;
+}
+
+@keyframes stroke-svg {
+  0% {
+    opacity: 0;
+    fill: none;
+    stroke-dashoffset: 300;
+  }
+  30% {
+    opacity: 1;
+    fill: none;
+    stroke-dashoffset: 300;
+  }
+  70% {
+    fill: rgba(0, 0, 0, 0);
+  }
+  75% {
+    opacity: 1;
+    fill: #000;
+    stroke-dashoffset: 0;
+  }
+}
+button, input[type=range] {
+  cursor: pointer;
+}
+
+.container {
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.title {
+  text-align: center;
+}
+
+.player {
+  flex-basis: 40%;
+  height: 100%;
+  flex-direction: column;
+  margin-top: 5rem;
+  margin-top: 5rem;
+}
+.player input {
+  width: 40rem;
+  margin-top: 0.5rem;
+}
+.player #cdThumb {
+  width: 24rem;
+  height: 24rem;
+  border-radius: 50%;
+  background: radial-gradient(transparent 0 5%, #8e44ad 5% 20%, #000 20%) no-repeat center/cover;
+  animation: rotateImgSong 10s linear infinite;
+  animation-play-state: paused;
+}
+@keyframes rotateImgSong {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.player #titleSong {
+  font-size: 2.4rem;
+  text-transform: capitalize;
+  margin-top: 1rem;
+}
+.player #timeRange {
+  flex-direction: column;
+}
+.player #timeRange #timeContent {
+  top: 0;
+  left: -1.6rem;
+  transform: translateX(var(--timeContent-left));
+  width: 5rem;
+  text-align: center;
+  background-color: rgba(0, 255, 255, 0.8);
+  font-size: 1.6rem;
+  border: 2px solid #07d4a1;
+  border-radius: 0.5rem;
+}
+.player #timeRange #timeContent::after {
+  content: " ";
+  height: 1rem;
+  width: 1rem;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background-image: linear-gradient(135deg, transparent 0 50%, #07d4a1 50%);
+}
+.player .control {
+  margin-top: 1rem;
+}
+.player .control > button {
+  font-size: 2rem;
+  border-radius: 50%;
+  margin: 0 1rem;
+  width: 5rem;
+  height: 5rem;
+  background-color: transparent;
+}
+.player .control > button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.player .control .volume {
+  width: 5rem;
+  height: 5rem;
+  font-size: 2rem;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+.player .control .volume input {
+  top: 22%;
+  left: 80%;
+  width: 10rem;
+}
+.player .control .volume > button {
+  margin: 0;
+  background-color: transparent;
+  font-size: 1.6rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.player .control .volume .mute {
+  display: none;
+}
+.player .control .volume.muted .volumeup {
+  display: none;
+}
+.player .control .volume.muted .mute {
+  display: inline;
+}
+.player .control .playControl {
+  margin: 0 1rem;
+  width: 5rem;
+  height: 5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.player .control .playControl:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.player .control .playControl i {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.player .control .playControl .icon-pause {
+  visibility: hidden;
+}
+.player .control .playControl.playing .icon-pause {
+  visibility: visible;
+}
+.player .control .playControl.playing .icon-play {
+  visibility: hidden;
+}
+
+.playlist {
+  flex-basis: 50%;
+}
+.playlist li {
+  transition: transform 0.2s linear;
+  cursor: pointer;
+}
+.playlist li img {
+  width: 5rem;
+  height: 5rem;
+}
+.playlist li span {
+  margin-left: 1rem;
+  font-size: 1.6rem;
+}
+.playlist li span::first-letter {
+  text-transform: uppercase;
+}
+.playlist li:hover {
+  transform: translate(1%, -20%);
+  background-color: rgba(226, 191, 151, 0.2);
+}
+
+/*# sourceMappingURL=style.css.map */

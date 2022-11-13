@@ -1,0 +1,82 @@
+{ 
+  "list": [
+    {
+        "name": "ngày chưa giông bão",
+        "singer": "tùng dương",
+        "path": "NGÀY CHƯA GIÔNG BÃO.mp3",
+        "imgSong": "ngaychuagiongbao.jpg"
+    },
+    {
+        "name": "vô lượng",
+        "singer": "masew",
+        "path":"voluong.mp3",
+        "imgSong": "voluong.jpg"
+    },
+    {
+        "name": "cưới thôi",
+        "singer": "masew",
+        "path": "Cưới Thôi.mp3",
+        "imgSong": "cuoithoi.jpg"
+    },
+    {
+        "name": "Chiều Thu Họa Bóng Nàng",
+        "singer": "DatKaa  QT Beatz",
+        "path": "Chiều Thu Họa Bóng Nàng.mp3",
+        "imgSong": "chieuthuhoabongnang.jpg"
+    },
+    {
+        "name": "Đêm Lao Xao",
+        "singer": "Phương Thanh",
+        "path": "Đêm Lao Xao.mp3",
+        "imgSong": "demlaoxao.jpg"
+    },
+    {
+        "name": "Hôm Nay Em Cưới Rồi",
+        "singer": "Khải Đăng",
+        "path": "Hôm Nay Em Cưới Rồi.mp3",
+        "imgSong": "homnayemcuoiroi.jpg"
+    },
+    {
+        "name": "in the end",
+        "singer": "linkin park",
+        "path": "In The End.mp3",
+        "imgSong": "linkinpark.jpg"
+    },
+    {
+        "name": "what i've done",
+        "singer": "linkin park",
+        "path": "What Ive Done.mp3",
+        "imgSong": "linkinpark.jpg"
+    },
+    {
+        "name": "thương nhau tới bến",
+        "singer": "nal",
+        "path": "Thương Nhau Tới Bến Orinn Remix.mp3",
+        "imgSong": "thuongnhautoiben.jpg"
+    },
+    {
+        "name": "new divide",
+        "singer": "linkin park",
+        "path": "New Divide.mp3",
+        "imgSong": "linkinpark.jpg"
+    },
+    {
+        "name": "numb guitar",
+        "singer": "nal",
+        "path": "Cole Ronald.mp3",
+        "imgSong": "linkinpark.jpg"
+    },
+    {
+        "name": "da da da",
+        "singer": "nalTanir & Tyomcha",
+        "path": "Da Da Da.mp3",
+        "imgSong": ""
+    },
+    {
+        "name": "unknown remix",
+        "singer": "unknown",
+        "path": "Remix.mp3",
+        "imgSong": ""
+    }
+  ]
+}
