@@ -15,6 +15,7 @@ setTimeout(() => {
   const app = {
     currentIndex: 0,
     currentTime: 0,
+    currentVolume: 0,
     isPlaying: false,
     isMute: false,
     song: function () {
@@ -97,12 +98,18 @@ setTimeout(() => {
     muteEvent: function () {
       if (true == this.isMute) {
         volume.classList.remove("muted");
+        this.isMute = false;
+        volumeRange.value = this.currentVolume;
       } else {
         volume.classList.add("muted");
+        this.isMute = true;
+        this.currentVolume = volumeRange.value;
+        volumeRange.value = 0;
       }
       audio.muted = this.isMute;
     },
   };
+  audio.volume = 0.5;
   /**
    * Control player
    */
